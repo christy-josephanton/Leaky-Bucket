@@ -2,10 +2,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 #PARAMETERS
-arrival_rate = 100
-output_rate = 1000
-sim_time = 1000
-queue_sizes = range(1,1000)  # Queue sizes from 1 to 1000
+arrival_rate = 100 
+output_rate = 1000 # (R)
+sim_time = 500
+queue_sizes = range(0,500)  # (B)
 #PARAMETERS
 
 
@@ -66,6 +66,8 @@ plt.plot(queue_sizes, packet_loss_rates, color='blue')
 plt.title("Packet Loss Rate vs Queue Size")
 plt.xlabel("Queue Size (B)")
 plt.ylabel("Packet Loss Rate")
+
+plt.ylim(bottom=0)  # Set Y-axis minimum to 0
 plt.grid()
 plt.savefig('5_1a_loss_rate.png')
 
@@ -75,6 +77,8 @@ plt.figure(figsize=(10, 8))
 plt.plot(queue_sizes, mean_output_rates, color='orange')
 plt.title("Mean Output Rate vs Queue Size")
 plt.xlabel("Queue Size (B)")
+
+plt.ylim(bottom=0)  # Set Y-axis minimum to 0
 plt.ylabel("Mean Output Rate (packets/s)")
 plt.grid()
 plt.savefig('5_1a_out_rate.png')

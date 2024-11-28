@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 
 #PARAMETERS
 arrival_rate = 100
-output_rates = range(1,1000) # output rates from 1 to 1000
-sim_time = 1000
+output_rates = range(1,501) # output rates from 1 to 1000
+sim_time = 500
 queue_size = 3 
 #PARAMETERS
 
